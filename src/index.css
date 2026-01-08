@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand Colors - Ink Purple */
+  --color-ink: #7c3aed;
+  --color-ink-light: #a78bfa;
+  --color-ink-dark: #5b21b6;
+
+  /* Brand Colors - Lavender */
+  --color-lavender-100: #f3e8ff;
+  --color-lavender-200: #e9d5ff;
+  --color-lavender-300: #d8b4fe;
+  --color-lavender-400: #c4b5fd;
+  --color-lavender-500: #a78bfa;
+  --color-lavender-600: #8b5cf6;
+
+  /* Brand Colors - Slate */
+  --color-slate-darker: #1a1a24;
+  --color-slate-dark: #2d2d3a;
+  --color-slate-mid: #3a3a4a;
+  --color-slate-light: #4a4a5e;
+
+  /* Semantic Colors - Light Mode */
+  --color-background-light: #ffffff;
+  --color-surface-light: #f9fafb;
+  --color-border-light: #e5e7eb;
+  --color-text-light: #111827;
+  --color-text-secondary-light: #6b7280;
+
+  /* Semantic Colors - Dark Mode */
+  --color-background-dark: var(--color-slate-darker);
+  --color-surface-dark: var(--color-slate-dark);
+  --color-border-dark: var(--color-slate-light);
+  --color-text-dark: #f9fafb;
+  --color-text-secondary-dark: #9ca3af;
+
+  /* Gradients */
+  --gradient-purple: linear-gradient(
+    135deg,
+    var(--color-ink) 0%,
+    var(--color-lavender-500) 100%
+  );
+  --gradient-slate: linear-gradient(
+    135deg,
+    var(--color-slate-dark) 0%,
+    var(--color-slate-light) 100%
+  );
+  --gradient-hero: linear-gradient(
+    135deg,
+    var(--color-slate-darker) 0%,
+    var(--color-ink-dark) 50%,
+    var(--color-slate-dark) 100%
+  );
+  --gradient-lavender: linear-gradient(
+    135deg,
+    var(--color-lavender-200) 0%,
+    var(--color-lavender-400) 100%
+  );
+}
+
+/* Light mode defaults */
+:root {
+  --color-background: var(--color-background-light);
+  --color-surface: var(--color-surface-light);
+  --color-border: var(--color-border-light);
+  --color-text: var(--color-text-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+}
+
+/* Dark mode */
+.dark {
+  --color-background: var(--color-background-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-border: var(--color-border-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+}
+
+/* Utility classes */
+@utility bg-gradient-purple {
+  background: var(--gradient-purple);
+}
+
+@utility bg-gradient-slate {
+  background: var(--gradient-slate);
+}
+
+@utility bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+@utility bg-gradient-lavender {
+  background: var(--gradient-lavender);
+}
+
+@utility text-ink {
+  color: var(--color-ink);
+}
+
+@utility bg-ink {
+  background-color: var(--color-ink);
+}
+
+@utility border-ink {
+  border-color: var(--color-ink);
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.hover-opacity {
+  @apply hover:opacity-70 cursor-pointer transition-opacity duration-200;
+}
+
+.hover-border {
+  @apply hover:border cursor-pointer transition-colors duration-200;
+}
