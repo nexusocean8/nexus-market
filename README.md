@@ -85,3 +85,7 @@ The pre-commit hook runs automatically when you commit changes, ensuring all cod
 - **Tailwind CSS 4** - Utility-first CSS framework
 - **pnpm** - Fast, disk space efficient package manager
 - **Reown AppKit** - Web3 wallet integration
+
+## Support
+
+For questions or support, please contact us at [hello@nexusocean.email](mailto:hello@nexusocean.email).
