@@ -50,8 +50,8 @@ Each route in the application has its own page component located in the `pages` 
 - [x] `create-nft.tsx` - NFT creation interface
 - [x] `create-collection.tsx` - Collection creation interface
 - [ ] `edit-collection.tsx` - Edit existing collections
-- [ ] `profile.tsx` - User profile page
-- [ ] `edit-profile.tsx` - Profile editing interface
+- [x] `profile.tsx` - User profile page
+- [x] `edit-profile.tsx` - Profile editing interface
 - [x] `account.tsx` - Account management
 - [ ] `activity.tsx` - Transaction and activity history
 - [x] `contact.tsx` - Contact form and support
